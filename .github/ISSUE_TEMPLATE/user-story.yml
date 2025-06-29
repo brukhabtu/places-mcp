@@ -1,0 +1,98 @@
+name: User Story
+description: Create a new user story for the Places MCP Server
+title: "[PLCS-XXX] "
+labels: ["user-story"]
+assignees: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## User Story Template
+        Please fill out this user story following our agile practices.
+  - type: textarea
+    id: story
+    attributes:
+      label: User Story
+      description: As a [role], I want [feature] so that [benefit]
+      placeholder: "As a developer, I want to configure the server with environment variables so that I can easily deploy to different environments"
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance Criteria
+      description: List the acceptance criteria that define when this story is complete
+      value: |
+        - [ ] Criterion 1
+        - [ ] Criterion 2
+        - [ ] Criterion 3
+    validations:
+      required: true
+  - type: dropdown
+    id: priority
+    attributes:
+      label: Priority
+      description: Select the priority level for this story
+      options:
+        - P0 - MVP Critical
+        - P1 - Core Features
+        - P2 - Enhancements
+        - P3 - Nice to Have
+    validations:
+      required: true
+  - type: dropdown
+    id: points
+    attributes:
+      label: Story Points
+      description: Estimate the complexity using Fibonacci sequence
+      options:
+        - "1"
+        - "2"
+        - "3"
+        - "5"
+        - "8"
+        - "13"
+        - "21"
+    validations:
+      required: true
+  - type: dropdown
+    id: sprint
+    attributes:
+      label: Target Sprint
+      description: Which sprint should this be completed in?
+      options:
+        - Sprint 1 - MVP Foundation
+        - Sprint 2 - Core Features
+        - Sprint 3 - Performance
+        - Sprint 4 - Advanced Features
+        - Sprint 5 - Production Ready
+        - Backlog
+    validations:
+      required: true
+  - type: dropdown
+    id: layer
+    attributes:
+      label: Architecture Layer
+      description: Which layer(s) does this story affect?
+      multiple: true
+      options:
+        - Configuration
+        - Domain
+        - Infrastructure
+        - Application
+        - Presentation
+        - Cross-cutting
+    validations:
+      required: true
+  - type: textarea
+    id: technical
+    attributes:
+      label: Technical Notes
+      description: Any technical considerations, dependencies, or implementation notes
+      placeholder: "- Depends on PLCS-001\n- Consider using Pydantic for validation\n- Need to handle edge cases for..."
+  - type: textarea
+    id: risks
+    attributes:
+      label: Risks and Mitigations
+      description: Identify any risks and how to mitigate them
+      placeholder: "Risk: API rate limits\nMitigation: Implement caching layer"
